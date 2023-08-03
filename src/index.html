@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple TODO App</title>
+  </head>
+
+  <body class="app-body">
+    <header class="app-header">
+      <nav class="navbar navbar-expand-lg"></nav>
+    </header>
+
+    <main class="app-main">
+      <!-- Модальное окно (МО) добавления задачи ///-->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mx-auto" id="staticBackdropLabel">
+                Input task name
+              </h5>
+            </div>
+
+            <div class="modal-body">
+              <h6>
+                <div class="div-inp app-input-task-label">Task name</div>
+              </h6>
+              <input type="text" value="task1" class="input app-input-task" />
+
+              <!-- Всплывающий список -->
+              <div class="div-inp invisible" id="input-user-form">
+                <h6>
+                  <div class="div-inp app-input-user-label">Select a user</div>
+                </h6>
+                <select class="div-inp input-user" name="user" id="input-user">
+                  <option class="input-user__item" value="test">test</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary button-close"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button type="button" class="btn btn-success app-button-input">
+                Add
+              </button>
+
+              <!-- Модификация МО для редактирования задач-->
+              <button
+                type="button"
+                class="btn btn-success app-button-input-taskedit invisible"
+              >
+                Apply
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning app-button-task-changeowner invisible"
+              >
+                Change owner
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger app-button-task-delete invisible"
+              >
+                Delete task
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Модальное окно добавления нового пользователя -->
+      <div
+        class="modal fade"
+        id="staticBackdropAddUser"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropAddUserLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mx-auto" id="staticBackdropAddUserLabel">
+                Input login and password of new user
+              </h5>
+            </div>
+
+            <div class="modal-body">
+              <h6>
+                <div class="div-inp">Input user login</div>
+              </h6>
+              <input type="text" value="login" class="input app-input-login" />
+              <h6>
+                <div class="div-inp">Input user password</div>
+              </h6>
+              <input
+                type="text"
+                value="password"
+                class="input app-input-password-1"
+              />
+              <h6>
+                <div class="div-inp">Confirm user password</div>
+              </h6>
+              <input
+                type="text"
+                value="password"
+                class="input app-input-password-2"
+              />
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary button-close"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-success app-button-input-adduser"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Модальное окно alert-->
+      <div
+        class="modal fade"
+        id="alert"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="alertLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mx-auto" id="alertLabel">Attention</h5>
+            </div>
+            <div class="modal-body d-flex">
+              <h6 class="mx-auto my-auto">
+                <span id="alert-message">Message</span>
+              </h6>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary button-close"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Основоное содержание (задачи) -->
+      <div class="container-fluid d-flex justify-content-center">
+        <div id="content">
+          <h2 class="app-auth-message">Please Sign In to see your tasks!</h2>
+        </div>
+      </div>
+
+      <!-- popup  пользовательское меню -->
+      <div class="app-popup-bg invisible"></div>
+      <div class="app-popup invisible">
+        <p class="app-popup__item" id="app-tasks-btn">My tasks</p>
+        <p class="app-popup__item" id="app-menu1-btn">Menu item 1</p>
+        <p class="app-popup__item" id="app-menu2-btn">Menu item 2</p>
+        <p class="app-popup__item" id="app-adduser-btn">Add New User</p>
+        <p class="app-popup__item" id="app-deleteuser-btn">Delete user</p>
+        <p class="app-popup__item" id="app-account-btn">My account</p>
+        <p class="app-popup__item" id="app-logout-btn">Sign Out</p>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container-fluid" id="footer"></div>
+    </footer>
+  </body>
+</html>
