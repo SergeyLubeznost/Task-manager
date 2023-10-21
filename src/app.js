@@ -1,3 +1,5 @@
+"use strict";
+
 export let backlogAddTaskBtn,
   readyAddTaskBtn,
   inProgAddTaskBtn,
