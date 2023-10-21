@@ -1,5 +1,3 @@
-"use strict";
-
 import { BaseModel } from "./BaseModel";
 import { getFromStorage, addToStorage } from "../utils";
 

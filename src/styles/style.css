@@ -11,7 +11,7 @@
 }
 
 .app-main {
-  background-color: #0079bf;
+  background: #0079BF;
 }
 
 .app-footer {
@@ -48,7 +48,7 @@
   background-color: #ebecf0;
   font-size: 18px;
   font-weight: 600;
-  color: #5e6c84;
+  color: #768194;
   margin: 10px 10px;
 }
 
@@ -205,8 +205,8 @@
 .app-popup-bg {
   width: 100vw;
   height: 100vh;
-  background-color: #a0b8e1;
-  opacity: 0.2;
+  background-color: #000000;
+  opacity: 0.1;
   position: absolute;
   top: 0;
   right: 0;
@@ -293,14 +293,12 @@
   background-color: #ebecf0;
 }
 
-/* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-  width: 14px; /* ширина для вертикального скролла */
-  height: 8px; /* высота для горизонтального скролла */
+  width: 14px; 
+  height: 8px;
   background-color: #0067a3;
 }
 
-/* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
   background-color: #3b7ea5;
   border-radius: 9em;

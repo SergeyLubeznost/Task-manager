@@ -1,5 +1,5 @@
 {
-  "name": "task_31",
+  "name": "Task-manager",
   "version": "1.0.0",
   "description": "Skillfactory educational project. Pure JS web-app written with OOP.",
   "main": "app.js",
@@ -9,19 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IzotovAA/Task_31"
+    "url": "git+https://https://github.com/SergeyLubeznost/Task-manager"
   },
   "keywords": [
     "skillfactory",
     "js",
     "oop"
   ],
-  "author": "Izotov Andrey",
+  "author": "Kutsalov Sergey",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/IzotovAA/Task_31/issues"
-  },
-  "homepage": "https://github.com/IzotovAA/Task_31#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
