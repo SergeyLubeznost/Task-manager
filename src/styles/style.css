@@ -82,12 +82,12 @@ background-color: #a356ad;
 }
 
 .modal-dialog {
-  transform: scale(.8); /* Начальное состояние */
-  transition: transform .3s ease-in-out; /* Плавное изменение */
+  transform: scale(.8); 
+  transition: transform .3s ease-in-out; 
 }
 
 .modal.show .modal-dialog {
-  transform: scale(1); /* Конечное состояние после плавной анимации */
+  transform: scale(1);
 }
 
 

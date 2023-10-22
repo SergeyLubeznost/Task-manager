@@ -8,6 +8,7 @@ let taskIdAllowDrop;
 export const getFromStorage = function (key) {
   return JSON.parse(localStorage.getItem(key) || "[]");
 };
+
 export const addToStorage = function (obj, key) {
   const storageData = getFromStorage(key);
   storageData.push(obj);

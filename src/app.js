@@ -9,8 +9,6 @@ export let backlogAddTaskBtn,
   inprogress,
   finished,
   tasksColumns;
-  
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "bootstrap/js/dist/modal";
 import "./styles/style.css";
@@ -25,21 +23,7 @@ import { Task } from "./models/Task";
 import { State } from "./state";
 import { authUser } from "./services/auth";
 import {
-  getFromStorage,
-  generateTestUser,
-  generateAdmin,
-  deleteFromStorage,
-  editInStorage,
-  isCurrentUserAdmin,
-  isTheLoginFree,
-  addNewUser,
-  displayTasks,
-  updUserList,
-  updTasksList,
-  moveToNextStage,
-  updBtnStatus,
-  userIdByName,
-  EventListener,
+  getFromStorage, generateTestUser, generateAdmin, deleteFromStorage, editInStorage, isCurrentUserAdmin, isTheLoginFree, addNewUser, displayTasks, updUserList, updTasksList, moveToNextStage, updBtnStatus, userIdByName, EventListener,
 } from "./utils";
 
 export const appState = new State();
@@ -78,7 +62,6 @@ let applyBtnFlag = "TaskEdit";
 localStorage.clear();
 generateTestUser(User);
 generateAdmin(Admin);
-
 document.addEventListener("DOMContentLoaded", startApp);
 modalWindowElement.addEventListener("hidden.bs.modal", handlerDefault);
 
@@ -134,7 +117,7 @@ function startApp() {
     footer.innerHTML = footerContent;
 
     if (!auth) {
-      alertMessage.innerHTML = "Login or password incorrect, please try again";
+      alertMessage.innerHTML = "Login or password incorrect";
       modalAlert.show();
       loginForm.removeEventListener("submit", handlerForm);
       return startApp();
