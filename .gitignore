@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 
 tmpnodejsnpm-cache/
+
+
+/node_modules
