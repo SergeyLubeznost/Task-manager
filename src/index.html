@@ -15,7 +15,7 @@
     <main class="app-main">
       <!-- Модальное окно (МО) добавления задачи ///-->
       <div
-        class="modal fade"
+        class="modal"
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -27,7 +27,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title mx-auto" id="staticBackdropLabel">
-                Input task name
+                Add Task Please
               </h5>
             </div>
 
@@ -42,7 +42,7 @@
                   <div class="div-inp app-input-user-label">Select a user</div>
                 </h6>
                 <select class="div-inp input-user" name="user" id="input-user">
-                  <option class="input-user__item" value="test">test</option>
+                  <option class="input-user__item" value="test">User</option>
                 </select>
               </div>
             </div>
@@ -59,7 +59,6 @@
                 Add
               </button>
 
-              <!-- Модификация МО для редактирования задач-->
               <button
                 type="button"
                 class="btn btn-success app-button-input-taskedit invisible"
@@ -70,13 +69,13 @@
                 type="button"
                 class="btn btn-warning app-button-task-changeowner invisible"
               >
-                Change owner
+                Change
               </button>
               <button
                 type="button"
                 class="btn btn-danger app-button-task-delete invisible"
               >
-                Delete task
+                Delete
               </button>
             </div>
           </div>
@@ -85,7 +84,7 @@
 
       <!-- Модальное окно добавления нового пользователя -->
       <div
-        class="modal fade"
+        class="modal "
         id="staticBackdropAddUser"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -93,11 +92,11 @@
         aria-labelledby="staticBackdropAddUserLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-top">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title mx-auto" id="staticBackdropAddUserLabel">
-                Input login and password of new user
+                Input login and password
               </h5>
             </div>
 
@@ -145,7 +144,7 @@
 
       <!-- Модальное окно alert-->
       <div
-        class="modal fade"
+        class="modal"
         id="alert"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
@@ -184,8 +183,8 @@
       <div class="app-popup-bg invisible"></div>
       <div class="app-popup invisible">
         <p class="app-popup__item" id="app-tasks-btn">My tasks</p>
-        <p class="app-popup__item" id="app-adduser-btn">Add New User</p>
-        <p class="app-popup__item" id="app-deleteuser-btn">Delete user</p>
+        <p class="app-popup__item" id="app-adduser-btn">Add User</p>
+        <p class="app-popup__item" id="app-deleteuser-btn">Delete User</p>
         <p class="app-popup__item" id="app-logout-btn">Sign Out</p>
       </div>
     </main>
