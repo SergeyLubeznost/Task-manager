@@ -18,7 +18,7 @@
   ],
   "author": "Kutsalov Sergey",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies":{
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "html-loader": "^4.2.0",

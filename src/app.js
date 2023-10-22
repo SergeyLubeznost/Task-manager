@@ -9,6 +9,7 @@ export let backlogAddTaskBtn,
   inprogress,
   finished,
   tasksColumns;
+  
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "bootstrap/js/dist/modal";

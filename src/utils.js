@@ -1,5 +1,6 @@
 "use strict";
 
+
 import { appState } from "./app";
 import { tasksColumns } from "./app";
 const locationList = ["backlog", "ready", "inprogress", "finished"];
